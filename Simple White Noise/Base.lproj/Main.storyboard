@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="neY-k6-FSc">
+                                <rect key="frame" x="54" y="501" width="267" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.46434633405254316" green="0.66754921499242637" blue="0.24864367901709347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.46113169193267822" green="0.66810446977615356" blue="0.24759265780448914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="dWT-25-axR"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple White Noise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-Ov-XdD">
+                                <rect key="frame" x="85.5" y="104" width="204" height="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.25640031695365906" green="0.45927709341049194" blue="0.019221249967813492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.25640031695365906" green="0.45927709341049194" blue="0.019221249967813492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG8-qS-zMb">
+                                <rect key="frame" x="117" y="264" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4Al-Ga-xre"/>
+                                    <constraint firstAttribute="height" constant="140" id="MZd-1k-ksD"/>
+                                </constraints>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="btnClked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chQ-eW-VkX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TG8-qS-zMb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="48c-1I-LEU"/>
+                            <constraint firstItem="TG8-qS-zMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cy3-ym-Vca"/>
+                            <constraint firstItem="neY-k6-FSc" firstAttribute="top" secondItem="TG8-qS-zMb" secondAttribute="bottom" constant="97" id="Hsd-kT-qPn"/>
+                            <constraint firstItem="neY-k6-FSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="cra-Bp-GoT"/>
+                            <constraint firstItem="TG8-qS-zMb" firstAttribute="top" secondItem="Xpb-Ov-XdD" secondAttribute="bottom" constant="133" id="jrE-bq-lPL"/>
+                            <constraint firstItem="neY-k6-FSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k9P-Py-cuD"/>
+                            <constraint firstItem="Xpb-Ov-XdD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oJE-JJ-cBV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="TG8-qS-zMb" id="fqU-En-ZgS"/>
+                        <outlet property="simpleWhiteNoiseLabel" destination="Xpb-Ov-XdD" id="5WA-pu-jTB"/>
+                        <outlet property="slider" destination="neY-k6-FSc" id="ByZ-tw-BbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Play" width="370" height="370"/>
+    </resources>
+</document>
