@@ -17,8 +17,6 @@ AVAudioPlayer *myAudio;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    NSLog(@"something new");
 }
 
 
